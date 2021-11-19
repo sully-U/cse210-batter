@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "fUSfHQyz+nxY1wkJx+OZclFQ9w1BpnykU0TbmaLsy04pefC2rZx4SK7Q7npo9Sr5HGd7LYu4udLgUp6Ms7rHSA==",
+  "success": true,
+  "projectFilePath": "/Users/sullyu/Documents/CSE-210/cse210-batter-csharp/cse210-batter-csharp.csproj",
+  "expectedPackageFiles": [
+    "/Users/sullyu/.nuget/packages/raylib-cs/3.7.0.1/raylib-cs.3.7.0.1.nupkg.sha512",
+    "/Users/sullyu/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
