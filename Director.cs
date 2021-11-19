@@ -18,6 +18,7 @@ namespace cse210_batter_csharp
         private bool _keepPlaying = true;
         private Dictionary<string, List<Actor>> _cast;
         private Dictionary<string, List<Action>> _script;
+        
 
         public Director(Dictionary<string, List<Actor>> cast, Dictionary<string, List<Action>> script)
         {
@@ -39,6 +40,13 @@ namespace cse210_batter_csharp
                 if (Raylib_cs.Raylib.WindowShouldClose())
                 {
                     _keepPlaying = false;
+                }
+                foreach (Ball ball in _cast["balls"])
+                {
+                    if (ball.GetY() >= (Constants.MAX_Y-Constants.BALL_HEIGHT))
+                    {
+                        _keepPlaying = false;
+                    }
                 }
             }
 

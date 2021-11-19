@@ -10,7 +10,7 @@ namespace cse210_batter_csharp.Services
     /// </summary>
     public class OutputService
     {
-        private Raylib_cs.Color _backgroundColor = Raylib_cs.Color.BLACK;
+        private Raylib_cs.Color _backgroundColor = Raylib_cs.Color.PURPLE;
         private Dictionary<string, Raylib_cs.Texture2D> _textures
             = new Dictionary<string, Raylib_cs.Texture2D>();
 

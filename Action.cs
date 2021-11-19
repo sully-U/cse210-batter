@@ -9,6 +9,9 @@ namespace cse210_batter_csharp
     /// </summary>
     public abstract class Action
     {
-        public abstract void Execute(Dictionary<string, List<Actor>> cast);
+        public virtual void Execute(Dictionary<string, List<Actor>> cast)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
