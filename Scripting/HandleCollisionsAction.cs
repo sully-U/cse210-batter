@@ -6,7 +6,7 @@ using cse210_batter_csharp.Services;
 namespace cse210_batter_csharp.Scripting
 {
     /// <summary>
-    /// An action to draw all of the actors in the game.
+    /// Class to handle the interaction between actors (brick and ball, ball and paddle)
     /// </summary>
     public class HandleCollisionsAction : Action
     {
@@ -19,6 +19,9 @@ namespace cse210_batter_csharp.Scripting
             _physicsService = physicsService;
         }
 
+        /// <summary>
+        /// Overrides the action of the actors to move correctly
+        /// </summary>
         public override void Execute(Dictionary<string, List<Actor>> cast)
         {
             List<Actor> bricksToRemove = new List<Actor>();
@@ -34,16 +37,6 @@ namespace cse210_batter_csharp.Scripting
                     _audioService.PlaySound(Constants.SOUND_BOUNCE);
                     ball.bounceVertical();
                     _points++;
-                    // if (ball.GetX() == paddle.GetRightEdge() && ball.GetY() >= paddle.GetTopEdge() && ball.GetY()<=paddle.GetBottomEdge())
-                    // {
-                    //     _audioService.PlaySound(Constants.SOUND_BOUNCE);
-                    //     ball.bounceHorizontal();
-                    // }
-                    // if (ball.GetX() == paddle.GetLeftEdge() && ball.GetY() >= paddle.GetTopEdge() && ball.GetY()<=paddle.GetBottomEdge())
-                    // {
-                    //     _audioService.PlaySound(Constants.SOUND_BOUNCE);
-                    //     ball.bounceHorizontal();
-                    // }
                 }
                 
                 foreach (Actor actor in bricks)
@@ -71,6 +64,10 @@ namespace cse210_batter_csharp.Scripting
                 }
 
             }
+
+            /// <summary>
+            /// Keeps track of ball and paddle interaction, once they have made contact 10 times, a new ball is added. 
+            /// </summary>
     
             if (_points == 10)
             {
@@ -78,6 +75,9 @@ namespace cse210_batter_csharp.Scripting
                 cast["balls"].Add(ball);
                 _points = 0;
             }
+            /// <summary>
+            /// Removes the brick from the screen
+            /// </summary>
             foreach (Brick brick in bricksToRemove)
             {
                 cast["bricks"].Remove(brick);

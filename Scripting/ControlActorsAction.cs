@@ -25,8 +25,6 @@ namespace cse210_batter_csharp.Scripting
 
             Point velocity = direction.Scale(Constants.PADDLE_SPEED);
             paddle.SetVelocity(velocity);
-
         }
-        
     }
 }

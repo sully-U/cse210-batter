@@ -3,7 +3,7 @@ using System;
 namespace cse210_batter_csharp.Casting
 {
     /// <summary>
-    /// Base class for all actors in the game.
+    /// Class for the brick actor
     /// </summary>
     public class Brick : Actor
     {

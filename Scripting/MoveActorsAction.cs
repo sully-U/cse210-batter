@@ -25,29 +25,31 @@ namespace cse210_batter_csharp
                 }
             }
         }
-        
+
         private void MoveActor(Actor actor)
         {
-            int x = actor.GetX();
-            int y = actor.GetY();
+                int x = actor.GetX();
+                int y = actor.GetY();
 
-            int dx = actor.GetVelocity().GetX();
-            int dy = actor.GetVelocity().GetY();
+                int dx = actor.GetVelocity().GetX();
+                int dy = actor.GetVelocity().GetY();
 
-            int newX = (x + dx) % Constants.MAX_X;
-            int newY = (y + dy) % Constants.MAX_Y;
+                int newX = (x + dx) % Constants.MAX_X;
+                int newY = (y + dy) % Constants.MAX_Y;
 
-            if (newX < 0)
-            {
-                newX = Constants.MAX_X;
-            }
+                if (newX < 0)
+                {
+                    newX = Constants.MAX_X;
+                }
 
-            if (newY < 0)
-            {
-                newY = Constants.MAX_Y;
-            }
+                if (newY < 0)
+                {
+                    newY = Constants.MAX_Y;
+                }
 
-            actor.SetPosition(new Point(newX, newY));
+                actor.SetPosition(new Point(newX, newY));
         }
+
+
     }
 }

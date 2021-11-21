@@ -4,7 +4,7 @@ using cse210_batter_csharp.Casting;
 namespace cse210_batter_csharp
 {
     /// <summary>
-    /// Base class for all actors in the game.
+    /// Class for the ball actor
     /// </summary>
     public class Ball : Actor
     {
@@ -19,6 +19,9 @@ namespace cse210_batter_csharp
             SetVelocity(new Point(6, -6));
             MoveNext();
         }
+            /// <summary>
+            /// Handle the horizontal change of direction of thr ball
+            /// </summary>
             public void bounceHorizontal()
             {
                 int dx = _velocity.GetX();
@@ -26,7 +29,9 @@ namespace cse210_batter_csharp
 
                 _velocity = new Point(-dx, dy);
             }
-
+            /// <summary>
+            /// Handle the vertical change of direction of thr ball
+            /// </summary>
             public void bounceVertical()
             {
                 int dx = _velocity.GetX();

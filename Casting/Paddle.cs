@@ -3,7 +3,7 @@ using System;
 namespace cse210_batter_csharp.Casting
 {
     /// <summary>
-    /// Base class for all actors in the game.
+    /// Class for the paddle actor
     /// </summary>
     public class Paddle : Actor
     {
@@ -16,5 +16,23 @@ namespace cse210_batter_csharp.Casting
             SetWidth(Constants.PADDLE_WIDTH);
             SetHeight(Constants.PADDLE_HEIGHT);
         }
+        // public void rightBoundary()
+        // {
+        //         int dx = _velocity.GetX();
+        //         int dy = _velocity.GetY();
+
+        //         _velocity = new Point(dx, dy);
+        //         _position = new Point (Constants.MAX_X-1-Constants.PADDLE_WIDTH, GetY());
+        // }
+        // public void leftBoundary()
+        // {
+        //         int dx = _velocity.GetX();
+        //         int dy = _velocity.GetY();
+
+        //         _velocity = new Point(dx, dy);
+        //         _position = new Point (1, GetY());
+        // }
+
+
     }
 }

@@ -14,7 +14,6 @@ namespace cse210_batter_csharp.Services
         {
 
         }
-
         public bool IsLeftPressed()
         {
             return Raylib.IsKeyDown(Raylib_cs.KeyboardKey.KEY_LEFT);
@@ -39,9 +38,10 @@ namespace cse210_batter_csharp.Services
         /// <returns></returns>
         public Point GetDirection()
         {
+
             int x = 0;
             int y = 0;
-
+            
             if (IsLeftPressed())
             {
                 x = -1;
